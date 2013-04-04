@@ -1,0 +1,537 @@
+﻿body
+{
+    margin: 0 auto;
+    width: auto;
+    background-color: #E0E0E0;
+    font-family: arial,sans-serif;
+}
+
+#header
+{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: Black;
+}
+
+#sub-header
+{
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#main-menu
+{
+    float: left;
+    width: 100%;
+    margin: 12px auto; /*font-family: 'Josefin Sans', sans-serif;*/
+    font-family: arial,sans-serif;
+    font-size: x-large;
+    letter-spacing: 0.2ex;
+    font-weight: 500;
+}
+
+.main-menu-button
+{
+    float: left;
+    padding: 4px 4px 2px 4px;
+}
+
+.main-menu-button:hover
+{
+    background-color: Gray;
+}
+
+.main-menu-button a
+{
+    text-decoration: none;
+    display: block;
+}
+
+#login-menu
+{
+    float: right;
+    font-family: arial,sans-serif;
+    font-weight: 500;
+}
+
+#login-menu a
+{
+    text-decoration: none;
+    font-size: medium;
+    letter-spacing: 0;
+    color: #D4D5D5;
+}
+
+#container
+{
+    z-index: 2;
+    height: auto;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 51px 0 0 0;
+}
+
+#inner-container
+{
+    background-color: White;
+    width: 100%;
+    min-height:700px;
+    margin: 1% 0 0 0;
+    overflow: hidden;
+    position:relative;
+    border: 1px solid #C4C2C0;
+    border-radius: 5px 5px;
+}
+
+#container-left-menu
+{
+    width: 20%;
+    float: left;
+    border-right: 1px ridge #C4C2C0;
+    height: 100%;
+    position:absolute;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-image: linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -o-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -moz-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -webkit-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -ms-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -webkit-gradient( 	linear, 	left bottom, 	left top, 	color-stop(0.36, rgb(46,45,46)), 	color-stop(0.68, rgb(54,52,52)), 	color-stop(0.52, rgb(48,46,48)) );
+}
+
+#profileButton
+{
+    border-top-left-radius: 10px;
+}
+#container-left-menu a
+{
+    text-decoration: none;
+}
+
+#container-content
+{
+    width: 77%;
+    float: right;
+    margin-right: 1.5%;
+}
+
+#profileButton, #uploadButton, #photoButton, #homeButton, #newProfileButton
+{
+    color: White;
+    font-weight:200;
+    text-align: center;
+    width: 98%;
+    cursor: pointer;
+    height: 20px;
+    padding: 10px 0 10px 0;
+    border-right: 4px double #504C47;
+    background-image: linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -o-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -moz-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -webkit-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -ms-linear-gradient(bottom, rgb(46,45,46) 36%, rgb(54,52,52) 68%, rgb(48,46,48) 52%);
+    background-image: -webkit-gradient( 	linear, 	left bottom, 	left top, 	color-stop(0.36, rgb(46,45,46)), 	color-stop(0.68, rgb(54,52,52)), 	color-stop(0.52, rgb(48,46,48)) );
+}
+
+#profileButton:hover, #uploadButton:hover, #photoButton:hover, #homeButton:hover, #newProfileButton:hover
+{
+    border-right: 4px solid #BBAD94;
+    background-image: linear-gradient(bottom, rgb(59,58,59) 36%, rgb(69,66,66) 68%, rgb(69,66,69) 52%);
+    background-image: -o-linear-gradient(bottom, rgb(59,58,59) 36%, rgb(69,66,66) 68%, rgb(69,66,69) 52%);
+    background-image: -moz-linear-gradient(bottom, rgb(59,58,59) 36%, rgb(69,66,66) 68%, rgb(69,66,69) 52%);
+    background-image: -webkit-linear-gradient(bottom, rgb(59,58,59) 36%, rgb(69,66,66) 68%, rgb(69,66,69) 52%);
+    background-image: -ms-linear-gradient(bottom, rgb(59,58,59) 36%, rgb(69,66,66) 68%, rgb(69,66,69) 52%);
+    background-image: -webkit-gradient( 	linear, 	left bottom, 	left top, 	color-stop(0.36, rgb(59,58,59)), 	color-stop(0.68, rgb(69,66,66)), 	color-stop(0.52, rgb(69,66,69)) );
+}
+
+#profileButton, #uploadButton, #photoButton, #homeButton, #newProfileButton a
+{
+    display: block;
+}
+
+.left-menu-bottom-border
+{
+    border-bottom: 4px double #504C47;
+    width:97%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom:0;
+}
+
+.href-style-remover
+{
+    text-decoration: none;
+    color: Black;
+}
+
+/*======================== login menu =====================*/
+#login-slide
+{
+    float: right;
+    background-color: Gray;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px 5px;
+    display: none;
+}
+
+#register-slide
+{
+    float: right;
+    background-color: Gray;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px 5px;
+    display: none;
+}
+
+.login-error
+{
+    color: #7C0202;
+    font-weight: bold;
+}
+
+/*======================== general subpages ===================*/
+.sub-container
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.htmleditor
+{
+    margin: 0 0 15px 0;
+}
+
+
+/*======================== homepage ======================*/
+#search-container
+{
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+    background-color: Gray;
+}
+
+#search-bar
+{
+    padding: 80px 0 80px 150px;
+}
+
+.search /*style for search textbox*/
+{
+    width: 400px;
+    height: 24px;
+    font-weight: 700;
+    font-size: larger;
+    margin: 0 10px 0 0;
+    padding: 0 0 5px 0;
+}
+
+.category
+{
+    height: 30px;
+    margin: 0 10px 0 0;
+    font-weight: 300;
+    font-size: medium;
+}
+
+.searchBtn
+{
+    /*background-image: url(../wImage/SearchBtn.jpg);*/
+    background-color: #FD7B1A;
+    border: none;
+    height: 30px;
+    font-weight: bolder;
+}
+
+/*======================== profile ======================*/
+.profile-content
+{
+    margin: 2% 0 0 0;
+}
+
+#profile-name-div
+{
+    margin: 2% 0 2% 0;
+    padding: 1% 1% 1% 1%;
+    width: 95%;
+    min-height:32px;
+    max-height:64px;
+    background-color: #36416C;
+    color: White;
+    border: 1px solid #C4C2C0;
+    border-radius: 4px 4px;
+    word-wrap: break-word;
+}
+
+#profile-name-font
+{
+    margin: 7px 7px 7px 7px;
+    font-weight:600;
+}
+
+#accordion
+{
+    width:97%;
+    margin: 2% 0 2% 0;
+    float:left;
+}
+
+#accordion p
+{
+    margin: 0 auto;
+}
+
+#mid-profile-container
+{
+    float: left;
+    width: 59%;
+    min-height: 700px;
+    max-height: 100%;
+    margin: 1% 0 1% 0;
+    border-right: 1px ridge #C4C2C0;
+    word-wrap: break-word;
+}
+
+#right-profile-container
+{
+    margin: 2% 0 2% 1%;
+    float: right;
+    width: 39.5%;
+}
+
+#map
+{
+    width: 100%;
+    height: 300px;
+    border: 1px ridge #C4C2C0;
+}
+
+.profile-img-content
+{
+    overflow: hidden;
+    margin: 5px 0 5px 0;
+}
+
+.profile-bottom-border, .bottom-border
+{
+    border-bottom: 1px ridge #E5E4E4;
+    margin-top: 2%;
+    width: 97%;
+ 
+}
+
+.div-img
+{
+    float: left;
+}
+
+.div-label
+{
+    float: left;
+    margin: 1.5px 0 0 5px;
+}
+
+
+
+/*=======================rating======================*/
+#rating-outer-container
+{
+    width:100%;
+    overflow:hidden;
+    height:140px;
+}
+
+#rating-container
+{
+    float:left;
+    margin: 2% 0 2% 0;
+    padding-right: 4px;
+    min-width: 50%;
+    max-width:65%;
+    height:99%;
+    
+}
+.div-rating-bar
+{
+    width: 150px;
+    height: 15px;
+    border: 1px solid #C4C2C0;
+    background-color: #EAEAEA;
+    border-radius: 5px;
+    float: left;
+    margin: 1px 1px 1px 1px;
+}
+
+#rating-bar-one, #rating-bar-two, #rating-bar-three, #rating-bar-four, #rating-bar-five
+{
+    height: 89%;
+    min-width: 0%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 1%;
+    background-color: #F89414;
+    border-radius: 5px 5px;
+    float: left;
+}
+
+.div-rating-number
+{
+    float:left;
+    margin-left:3px;
+}
+
+#user-rating-container, #login-rating-container
+{
+    margin: 2% 0 2% 0;
+    margin-left: 2px;
+    padding-left: 4px;
+    width:40%;
+    height:99%;
+    float:left;
+    display:none;
+    border-left: 1px ridge #C4C2C0;
+    word-wrap: break-word;
+    
+}
+
+.rateLabel
+{
+    float:left;
+    width:70px;
+}
+
+#score-rating
+{
+    float:right;
+    margin-top: 7px;
+}
+
+/*=======================photo album======================*/
+
+#popup-image-container
+{
+    position: fixed;
+    width: 100%;
+    height: 90%;
+    margin: 0 10% 0 10%;
+    left: 0;
+    display: none;
+    z-index:2;
+}
+
+#inner-left-blank
+{
+    width: 10%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+}
+
+#inner-right-blank
+{
+    width: 10%;
+    height: 100%;
+    right: 0;
+    position: fixed;
+}
+
+#inner-popup
+{
+    width: 80%;
+    height: 95%;
+    background-color: Black;
+    border-radius: 5%;
+    border: 3px solid orange;
+}
+
+
+#image-container
+{
+    float: left;
+    width: 65%;
+    height: 90%; /**margin auto work with defined width and height only**/
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+}
+
+#image-box
+{
+    display: table-cell;
+    vertical-align: middle; /**work like a boss only with display:table in outer div and table-cell inner div**/
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    max-width: 50%;
+}
+
+#caption-container
+{
+    float: left;
+    width: 33%;
+    height: 93%;
+    margin: 2% 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+#caption-box
+{
+    opacity: 0.3;
+    background-color: #DDDDDD;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    margin: 1% 1% 1% 1%;
+    border-radius: 5% 5%;
+}
+
+#caption-font
+{
+    color: #DDDDDD;
+    position: relative;
+    z-index: 3;
+    word-wrap: break-word;
+    text-align: justify;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 3% 3% 3% 3%;
+}
+
+.img
+{
+    margin: 2px 2px 2px 2px;
+    z-index:1;
+    border: 1px ridge #C4C2C0;
+    overflow:hidden;
+    width:240px;
+    height:100px;
+
+}
+
+.img-inner
+{
+    position:relative;
+    top:100px;
+    left:-200px;
+}
+
+.img:hover
+{
+    -webkit-transition: all 0.5s;
+    -webkit-filter: hue-rotate(180deg);
+}
+
+#photo-list
+{
+    margin: 2% auto;
+}

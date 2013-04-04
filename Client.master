@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Client.master.cs" Inherits="Client" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/client_cs.css" rel="Stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'
+        type='text/css' />
+    <link href="css/jquery-ui-1.9.2.custom.min.css" rel="Stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="../Scripts/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="../Scripts/clientmasterpage.js" type="text/javascript"></script>
+    <script src="../Scripts/googlescripts.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            pageType = document.getElementById('pageType').value;
+            login = document.getElementById('loginStatus').value;
+            if (pageType == "profile") {
+                document.getElementById('profileButton').style.borderRightColor = '#F89414';
+                document.getElementById('profileButton').style.borderRightStyle = 'solid';
+                document.getElementById('profileButton').style.borderRightWidth = '4px';
+            }
+            if (pageType == "photo") {
+                document.getElementById('photoButton').style.borderRightColor = '#F89414';
+                document.getElementById('photoButton').style.borderRightStyle = 'solid';
+                document.getElementById('photoButton').style.borderRightWidth = '4px';
+            }
+            if (pageType == "new_profile") {
+                document.getElementById('newProfileButton').style.borderRightColor = '#F89414';
+                document.getElementById('newProfileButton').style.borderRightStyle = 'solid';
+                document.getElementById('newProfileButton').style.borderRightWidth = '4px';
+            }
+
+            $('.login-click').click(function () {
+                if ($('#register-slide').is(":visible")) {
+                    $('#register-slide').hide();
+                }
+                $('#login-slide').slideToggle("fast");
+            });
+
+            $('.register-click').click(function () {
+                if ($('#login-slide').is(":visible")) {
+                    $('#login-slide').hide();
+                }
+                $('#register-slide').slideToggle("fast");
+            });
+
+            $('#container').click(function () {
+                if ($('#register-slide').is(":visible")) {
+                    $('#register-slide').hide();
+                }
+
+                if ($('#login-slide').is(":visible")) {
+                    $('#login-slide').hide();
+                }
+            });
+
+
+            loginError = document.getElementById('loginErrorStatus').value;
+            if (login == "default") {
+                $('.user_name').hide();
+            }
+            if (login == "login") {
+                $('.login-click').hide();
+                $('.register-click').hide();
+            }
+
+            if (loginError == "error") {
+                $('#login-slide').show();
+            }
+            if (loginError == "noError") {
+                $('#login-slide').hide();
+            }
+
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+        <div id="sub-header">
+            <div id="main-menu">
+                <div class="main-menu-button">
+                    <a href="../application/homepage.aspx" style="color: #CB1825;">Home</a></div>
+                <div class="main-menu-button">
+                    <a href="#" style="color: #73D97D;">About</a></div>
+                <div class="main-menu-button">
+                    <a href="#" style="color: #4A8CEC;">Contact</a></div>
+                <div class="main-menu-button">
+                    <a href="#" style="color: #954DF6;">Blog</a></div>
+                <div class="main-menu-button">
+                    <a href="#" style="color: #E26304;">Support</a></div>
+                <div id="login-menu">
+                    <a href="#" class="login-click">login</a><a class="login-click"> or </a><a href="#"
+                        class="register-click">register</a> <a>
+                            <asp:Label ID="username_m" runat="server" class="user-name"></asp:Label></a>
+                </div>
+            </div>
+            <%--Login Menu slidedown--%>
+            <div id="login-slide">
+                <div>
+                    <asp:Label ID="usernameLbl_l" runat="server" Text="Username:"></asp:Label>
+                </div>
+                <div>
+                    <asp:TextBox ID="username_l" runat="server"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="passwordLbl_l" runat="server" Text="Password:"></asp:Label>
+                </div>
+                <div>
+                    <asp:TextBox ID="password_l" runat="server" TextMode="Password"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="login_error" runat="server" class="login-error"></asp:Label>
+                </div>
+                <div>
+                    <asp:Button ID="login" runat="server" Text="Login" OnClick="login_Click" />
+                </div>
+            </div>
+            <%--End Menu slidedown--%>
+            <div id="register-slide">
+                <div>
+                    <asp:Label ID="usernameLbl" runat="server" Text="Username:"></asp:Label>
+                </div>
+                <div>
+                    <asp:TextBox ID="username" runat="server"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="passwordLbl" runat="server" Text="Password:"></asp:Label>
+                </div>
+                <div>
+                    <asp:TextBox ID="password" runat="server"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="firstNameLbl" runat="server" Text="First Name:"></asp:Label>
+                </div>
+                <div>
+                    <asp:TextBox ID="firstName" runat="server"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="lastNameLbl" runat="server" Text="Last Name:"></asp:Label>
+                </div>
+                <div>
+                    <asp:TextBox ID="lastName" runat="server"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Button ID="register" runat="server" Text="Register" OnClick="register_Click" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="inner-container">
+            <div id="container-left-menu">
+                <div id="profileButton" onclick="goProfile()">
+                    Profile</div>
+                <div id="uploadButton" onclick="goUpload()">
+                    Upload</div>
+                <div id="photoButton" onclick="goImage()">
+                    Photo</div>
+                <div id="homeButton">
+                    Home</div>
+                <div class="left-menu-bottom-border">
+                </div>
+                <div id="newProfileButton" onclick="goNewProfile()">
+                    New Profile</div>
+            </div>
+            <asp:HiddenField ID="profileID" runat="server" />
+            <asp:HiddenField ID="profileName" runat="server" />
+            <asp:HiddenField ID="pageType" runat="server" />
+            <asp:HiddenField ID="loginStatus" runat="server" />
+            <asp:HiddenField ID="loginErrorStatus" runat="server" />
+            <div id="container-content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
